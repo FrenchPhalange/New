@@ -23,8 +23,7 @@ return new class extends Migration
             $table->tinyInteger('is_repaired');
             $table->tinyInteger('is_broken');
             $table->dateTime('returned_at')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
 
         });
     }

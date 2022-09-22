@@ -18,9 +18,8 @@ return new class extends Migration
             $table->foreignId('loggable_id')->constrained();
             $table->foreignId('computer_id')->constrained();
             $table->string('loggable_type');
-            $table->varchar('message');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at')->useCurrent();
+            $table->string('message');
+            $table->timestamps();
         });
     }
 

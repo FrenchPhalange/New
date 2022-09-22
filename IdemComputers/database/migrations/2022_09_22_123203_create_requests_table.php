@@ -18,8 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('computer_id')->constrained();
             $table->dateTime('start_date');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
             $table->tinyIncrements('is_accepted');
         });
     }

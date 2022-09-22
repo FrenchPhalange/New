@@ -15,17 +15,16 @@ return new class extends Migration
     {
         Schema::create('repairers', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name')->nullable();
-            $table->varchar('phone')->nullable();
-            $table->varchar('email')->nullable();
-            $table->varchar('siret')->nullable();
-            $table->varchar('address')->nullable();
-            $table->varchar('city')->nullable();
-            $table->varchar('postal_code')->nullable();
-            $table->varchar('country')->nullable();
+            $table->string('name')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('siret')->nullable();
+            $table->string('address')->nullable();
+            $table->string('city')->nullable();
+            $table->string('postal_code')->nullable();
+            $table->string('country')->nullable();
             $table->tinyInteger('is_internal')->nullable();
-            $table->dateTime('created_at')->nullable();
-            $table->dateTime('updated_at')->nullable();
+            $table->timestamps();
         });
     }
 

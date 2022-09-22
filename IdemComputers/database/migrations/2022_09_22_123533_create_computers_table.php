@@ -15,15 +15,14 @@ return new class extends Migration
     {
         Schema::create('computers', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name');
-            $table->varchar('slug');
+            $table->string('name');
+            $table->string('slug');
             $table->foreignId('brand_id');
-            $table->varchar('stock_type');
-            $table->varchar('comment');
+            $table->string('stock_type');
+            $table->string('comment');
             $table->tinyIncrements('is_available');
-            $table->varchar('image');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at')->nullable();
+            $table->string('image');
+            $table->timestamps();
         });
     }
 

@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->enum('type',['Software', 'Hardware']);
             $table->foreignId('brand_id');
-            $table->varchar('name');
-            $table->varchar('serial_number');
-            $table->varchar('comment');
+            $table->string('name');
+            $table->string('serial_number');
+            $table->string('comment');
         });
     }
 

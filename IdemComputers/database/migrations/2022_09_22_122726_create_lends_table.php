@@ -18,12 +18,11 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('computer_id')->constrained();
             $table->tinyIncrements('is_returned');
-            $table->varchar('comment');
+            $table->string('comment');
             $table->dateTime('begin_at');
             $table->dateTime('finish_at');
             $table->dateTime('returned_at');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->timestamps();
 
         });
     }

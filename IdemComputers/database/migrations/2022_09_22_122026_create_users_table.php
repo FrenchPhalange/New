@@ -13,16 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->varchar('name');
-            $table->string('email')->unique();
-            $table->varchar('email_verified_at');
-            $table->varchar('password');
-            $table->foreignId('lend_id')->primary();
-            $table->foreignId('requests_id')->primary();
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at')->nullable();
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('lend_id')->index();
+            $table->foreignId('requests_id')->index();
+
         });
     }
 

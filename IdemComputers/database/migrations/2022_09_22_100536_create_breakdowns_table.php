@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('breakdowns', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name');
+            $table->string('name');
             $table->enum('type',['Software', 'Hardware']);
         });
     }

@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('repairs_types', function (Blueprint $table) {
             $table->id();
-            $table->varchar('name');
-            $table->varchar('slug');
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at')->nullable();
+            $table->string('name');
+            $table->string('slug');
+            $table->timestamps();
         });
     }
 
